@@ -1,0 +1,39 @@
+{% extends 'capacitaciones/base.html' %}
+
+{% block title %}Subir Video{% endblock %}
+
+{% block content %}
+
+<h3>Subir Nueva Capacitación</h3>
+<hr>
+
+<div class="card p-4 shadow-sm">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            {{ form.titulo }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            {{ form.descripcion }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">🎞️ Archivo de Video</label>
+            {{ form.archivo }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">🖼️ Miniatura (opcional)</label>
+            {{ form.thumbnail }}
+        </div>
+
+        <button class="btn btn-success">Guardar</button>
+        <a href="{% url 'video_list' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+{% endblock %}

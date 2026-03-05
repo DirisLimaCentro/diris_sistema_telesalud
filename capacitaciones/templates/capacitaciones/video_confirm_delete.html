@@ -1,0 +1,31 @@
+{% extends 'capacitaciones/base.html' %}
+
+{% block title %}Eliminar Video{% endblock %}
+
+{% block content %}
+
+<div class="card shadow p-4">
+
+    <h3 class="text-danger">Eliminar video</h3>
+
+    <p>
+        ¿Seguro que deseas eliminar el video:
+        <strong>{{ video.titulo }}</strong> ?
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <button class="btn btn-danger">
+            🗑 Eliminar
+        </button>
+
+        <a href="{% url 'video_detail' video.id %}" class="btn btn-secondary">
+            Cancelar
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}
