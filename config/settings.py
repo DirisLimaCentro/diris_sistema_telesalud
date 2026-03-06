@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'capacitaciones'
+    
+
 ]
 
 MIDDLEWARE = [
@@ -78,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'diris_sistema_telesalud',
         'USER': 'root',
-        'PASSWORD': '1234',
+        'PASSWORD': 'Administrador@123',
         'HOST': '127.0.0.1',   # o IP del servidor
         'PORT': '3306',
         'OPTIONS': {
