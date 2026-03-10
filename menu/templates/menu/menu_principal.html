@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Portal de Telesalud</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family:'Poppins', sans-serif;
+    background: url("{% static 'img/fondo-celeste.png' %}") no-repeat center center fixed;
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+}
+
+.portal-container{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+}
+
+.portal-title{
+    font-size:40px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.portal-subtitle{
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+.card-btn{
+    border-radius:15px;
+    padding:40px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.card-btn:hover{
+    transform:scale(1.05);
+}
+
+.capacitaciones{
+    background:linear-gradient(135deg,#2b7cff,#003f9e);
+}
+
+.consulta{
+    background:linear-gradient(135deg,#2bb673,#0b7a47);
+}
+
+.card-btn h3{
+    font-weight:600;
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container portal-container">
+
+<h1 class="portal-title">
+BIENVENIDOS AL PORTAL DE TELESALUD
+</h1>
+
+<p class="portal-subtitle">
+Seleccione una opción
+</p>
+
+<div class="row justify-content-center g-4">
+
+<div class="col-md-4">
+
+<a href="http://127.0.0.1:8000/login/" class="card-btn capacitaciones d-block shadow-lg">
+
+<div class="icon">
+👨🏻‍💻
+</div>
+
+<h3>Telecapacitaciones</h3>
+
+<p>Acceder al módulo de Telecapacitaciones</p>
+
+</a>
+
+</div>
+
+<div class="col-md-4">
+
+<a href="http://10.0.0.8:8000/consulta/" class="card-btn consulta d-block shadow-lg">
+
+<div class="icon">
+🧑‍💻
+</div>
+
+<h3>TeleIEC</h3>
+
+<p>Acceder al módulo de TeleIEC </p>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
